@@ -1,0 +1,103 @@
+option = {
+    title: {
+      text: "Sequential performance of web servers"
+    },
+    xAxis: {
+      type: 'category',
+      data: ['C++ (oatpp)', 'C++ (Simple-Web-Server)', 'JavaScript (ExpressJS)', 'PHP (+Apache)']
+    },
+    yAxis: {
+      type: 'value',
+      axisLabel: {
+        formatter: '{value} [#/s]'
+      },
+    },
+    series: [
+      {
+        data: [2004, 3079, 1304, 1612],
+        type: 'bar',
+        showBackground: true,
+        backgroundStyle: {
+          color: 'rgba(180, 180, 180, 0.2)'
+        }
+      }
+    ]
+  };
+
+option = {
+    title: {
+      text: "Sequential performance of web servers"
+    },
+    xAxis: {
+      type: 'category',
+      data: ['C++ (oatpp)', 'C++ (Simple-Web-Server)', 'JavaScript (ExpressJS)', 'PHP (+Apache)']
+    },
+    yAxis: {
+      type: 'value',
+      axisLabel: {
+        formatter: '{value} [ms]'
+      },
+    },
+    series: [
+      {
+        data: [0.499, 0.325, 0.766, 0.620],
+        type: 'bar',
+        showBackground: true,
+        backgroundStyle: {
+          color: 'rgba(180, 180, 180, 0.2)'
+        }
+      }
+    ]
+  };
+
+  option = {
+    title: {
+      text: "Concurrent performance of web servers"
+    },
+    xAxis: {
+      type: 'category',
+      data: ['C++ (oatpp)', 'C++ (Simple-Web-Server)', 'JavaScript (ExpressJS)', 'PHP (+Apache)']
+    },
+    yAxis: {
+      type: 'value',
+      axisLabel: {
+        formatter: '{value} [#/s]'
+      },
+    },
+    series: [
+      {
+        data: [11317, 17068, 3003, 4549],
+        type: 'bar',
+        showBackground: true,
+        backgroundStyle: {
+          color: 'rgba(180, 180, 180, 0.2)'
+        }
+      }
+    ]
+  };
+
+  option = {
+    title: {
+      text: "Concurrent performance of web servers"
+    },
+    xAxis: {
+      type: 'category',
+      data: ['C++ (oatpp)', 'C++ (Simple-Web-Server)', 'JavaScript (ExpressJS)', 'PHP (+Apache)']
+    },
+    yAxis: {
+      type: 'value',
+      axisLabel: {
+        formatter: '{value} [ms]'
+      },
+    },
+    series: [
+      {
+        data: [0.088, 0.059, 0.333, 0.220],
+        type: 'bar',
+        showBackground: true,
+        backgroundStyle: {
+          color: 'rgba(180, 180, 180, 0.2)'
+        }
+      }
+    ]
+  };

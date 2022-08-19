@@ -1,0 +1,113 @@
+beheerder@DESKTOP-EE8CUQA:~$ ab -n 60000 -c 1 http://localhost:8000/
+This is ApacheBench, Version 2.3 <$Revision: 1843412 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking localhost (be patient)
+Completed 6000 requests
+Completed 12000 requests
+Completed 18000 requests
+Completed 24000 requests
+Completed 30000 requests
+Completed 36000 requests
+Completed 42000 requests
+Completed 48000 requests
+Completed 54000 requests
+Completed 60000 requests
+Finished 60000 requests
+
+
+Server Software:        Apache/2.4.41
+Server Hostname:        localhost
+Server Port:            8000
+
+Document Path:          /
+Document Length:        43 bytes
+
+Concurrency Level:      1
+Time taken for tests:   37.213 seconds
+Complete requests:      60000
+Failed requests:        0
+Total transferred:      12120000 bytes
+HTML transferred:       2580000 bytes
+Requests per second:    1612.33 [#/sec] (mean)
+Time per request:       0.620 [ms] (mean)
+Time per request:       0.620 [ms] (mean, across all concurrent requests)
+Transfer rate:          318.06 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   0.0      0       1
+Processing:     0    1   0.6      0      52
+Waiting:        0    0   0.1      0       8
+Total:          0    1   0.6      0      52
+WARNING: The median and mean for the processing time are not within a normal deviation
+        These results are probably not that reliable.
+WARNING: The median and mean for the total time are not within a normal deviation
+        These results are probably not that reliable.
+
+Percentage of the requests served within a certain time (ms)
+  50%      0
+  66%      1
+  75%      1
+  80%      1
+  90%      1
+  95%      1
+  98%      1
+  99%      1
+ 100%     52 (longest request)
+
+beheerder@DESKTOP-EE8CUQA:~$ ab -n 60000 -c 1000 http://localhost:8000/
+This is ApacheBench, Version 2.3 <$Revision: 1843412 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking localhost (be patient)
+Completed 6000 requests
+Completed 12000 requests
+Completed 18000 requests
+Completed 24000 requests
+Completed 30000 requests
+Completed 36000 requests
+Completed 42000 requests
+Completed 48000 requests
+Completed 54000 requests
+Completed 60000 requests
+Finished 60000 requests
+
+
+Server Software:        Apache/2.4.41
+Server Hostname:        localhost
+Server Port:            8000
+
+Document Path:          /
+Document Length:        43 bytes
+
+Concurrency Level:      1000
+Time taken for tests:   13.189 seconds
+Complete requests:      60000
+Failed requests:        0
+Total transferred:      12120000 bytes
+HTML transferred:       2580000 bytes
+Requests per second:    4549.08 [#/sec] (mean)
+Time per request:       219.825 [ms] (mean)
+Time per request:       0.220 [ms] (mean, across all concurrent requests)
+Transfer rate:          897.38 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    5  33.2      2    1084
+Processing:     5  166 1065.0     72   13162
+Waiting:        1  165 1065.0     71   13162
+Total:         20  171 1066.9     75   13185
+
+Percentage of the requests served within a certain time (ms)
+  50%     75
+  66%     78
+  75%     82
+  80%     86
+  90%     90
+  95%     96
+  98%    124
+  99%    281
+ 100%  13185 (longest request) 

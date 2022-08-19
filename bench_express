@@ -1,0 +1,109 @@
+beheerder@DESKTOP-EE8CUQA:~/express$ ab -n 60000 -c 1 http://localhost:8000/
+This is ApacheBench, Version 2.3 <$Revision: 1843412 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking localhost (be patient)
+Completed 6000 requests
+Completed 12000 requests
+Completed 18000 requests
+Completed 24000 requests
+Completed 30000 requests
+Completed 36000 requests
+Completed 42000 requests
+Completed 48000 requests
+Completed 54000 requests
+Completed 60000 requests
+Finished 60000 requests
+
+
+Server Software:
+Server Hostname:        localhost
+Server Port:            8000
+
+Document Path:          /
+Document Length:        43 bytes
+
+Concurrency Level:      1
+Time taken for tests:   45.986 seconds
+Complete requests:      60000
+Failed requests:        0
+Total transferred:      15000000 bytes
+HTML transferred:       2580000 bytes
+Requests per second:    1304.76 [#/sec] (mean)
+Time per request:       0.766 [ms] (mean)
+Time per request:       0.766 [ms] (mean, across all concurrent requests)
+Transfer rate:          318.54 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   0.0      0       1
+Processing:     0    1   0.3      1      10
+Waiting:        0    0   0.2      0      10
+Total:          0    1   0.3      1      10
+
+Percentage of the requests served within a certain time (ms)
+  50%      1
+  66%      1
+  75%      1
+  80%      1
+  90%      1
+  95%      1
+  98%      1
+  99%      2
+ 100%     10 (longest request)
+
+ beheerder@DESKTOP-EE8CUQA:~/express$ ab -n 60000 -c 1000 http://localhost:8000/
+This is ApacheBench, Version 2.3 <$Revision: 1843412 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking localhost (be patient)
+Completed 6000 requests
+Completed 12000 requests
+Completed 18000 requests
+Completed 24000 requests
+Completed 30000 requests
+Completed 36000 requests
+Completed 42000 requests
+Completed 48000 requests
+Completed 54000 requests
+Completed 60000 requests
+Finished 60000 requests
+
+
+Server Software:
+Server Hostname:        localhost
+Server Port:            8000
+
+Document Path:          /
+Document Length:        43 bytes
+
+Concurrency Level:      1000
+Time taken for tests:   19.979 seconds
+Complete requests:      60000
+Failed requests:        0
+Total transferred:      15000000 bytes
+HTML transferred:       2580000 bytes
+Requests per second:    3003.21 [#/sec] (mean)
+Time per request:       332.977 [ms] (mean)
+Time per request:       0.333 [ms] (mean, across all concurrent requests)
+Transfer rate:          733.21 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0   70 244.5      9    1085
+Processing:    32  259  54.1    261     551
+Waiting:        2  138  59.1    133     358
+Total:         32  330 278.9    271    1636
+
+Percentage of the requests served within a certain time (ms)
+  50%    271
+  66%    285
+  75%    296
+  80%    302
+  90%    323
+  95%   1334
+  98%   1463
+  99%   1488
+ 100%   1636 (longest request)
